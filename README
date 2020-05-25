@@ -1,0 +1,9 @@
+while [ 1 ];do vardate=$(date +%d\-%m\-%Y\_%H.%M.%S); screencapture -t jpg -x /Users/Emre/Desktop/test/$vardate.jpg; sleep 1; done
+
+
+
+
+ffmpeg -pattern_type glob -i '*.jpg' -c:v libx264 -vf fps=25 -pix_fmt yuv420p /Users/Emre/Desktop/test/out.mp4
+
+
+Please change the path. That part; /Users/Emre/Desktop/test/ 
